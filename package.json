@@ -2,9 +2,11 @@
   "name": "backendless-cms",
   "version": "1.0.0",
   "description": "test-task",
+  "homepage": "https://Yurijfedor.github.io/backendless-cms",
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@babel/core": "^7.23.2",
@@ -19,6 +21,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.3"
   }
 }
