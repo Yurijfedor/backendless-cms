@@ -1,0 +1,23 @@
+[
+  {
+    "id": "dummyTable",
+    "title": "Dummy Table",
+    "order": 1,
+    "path": "/dummyTable",
+    "component": "DummyTableComponent"
+  },
+  {
+    "id": "dummyChart",
+    "title": "Dummy Chart",
+    "order": 2,
+    "path": "/dummyChart",
+    "component": "DummyChartComponent"
+  },
+  {
+    "id": "dummyList",
+    "title": "Dummy List",
+    "order": 0,
+    "path": "/dummyList",
+    "component": "DummyListComponent"
+  }
+]
