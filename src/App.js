@@ -11,7 +11,7 @@ const NotFoundComponent = lazy(() => import("./components/notFoundComponent"));
 
 const App = () => {
   const [tabsData, setTabsData] = useState([]);
-  const [isFetchSucces, setIsFetchSucces] = useState(true);
+  const [isFetchSuccess, setIsFetchSuccess] = useState(true);
 
   useEffect(() => {
     fetch("https://example.com", {
@@ -22,7 +22,7 @@ const App = () => {
       .then((data) => setTabsData(data))
       .catch(() => {
         setTabsData(tabsDataExample);
-        setIsFetchSucces(false);
+        setIsFetchSuccess(false);
       });
   }, []);
 
@@ -32,14 +32,14 @@ const App = () => {
         <h1>Dummy CMS</h1>
         <TabMenu tabs={tabsData} />
         <Routes>
-          {isFetchSucces && tabsData && tabsData.length > 0 ? (
+          {isFetchSuccess && tabsData?.length > 0 ? (
             tabsData.map((tab) => (
               <Route
                 key={tab.id}
                 path={tab.path}
                 element={
                   <Suspense fallback={<div>Loading...</div>}>
-                    <TabContentLoader />
+                    <TabContentLoader currentTab={tab} />
                   </Suspense>
                 }
               />

@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 
-const TabContentLoader = ({ currentTab, tabId, loadTabContent }) => {
+const TabContentLoader = ({ currentTab }) => {
   const [tabContent, setTabContent] = useState(null);
 
   useEffect(() => {
-    if (currentTab === tabId) {
-      loadTabContent().then((content) => {
-        setTabContent(content);
-      });
+    if (currentTab) {
+      setTabContent(currentTab);
     }
-  }, [currentTab, tabId, loadTabContent]);
+  }, [currentTab]);
 
   return <div>{tabContent ? tabContent() : <p>Loading...</p>}</div>;
 };
