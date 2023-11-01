@@ -14,7 +14,7 @@ const App = () => {
   const [isFetchSucces, setIsFetchSucces] = useState(true);
 
   useEffect(() => {
-    fetch("http://example.com", {
+    fetch("https://example.com", {
       method: "HEAD",
       mode: "no-cors",
     })
