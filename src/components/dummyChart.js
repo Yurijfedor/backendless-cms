@@ -1,7 +1,7 @@
 import React from "react";
-const DummyChart = () => (
+const DummyChart = ({ tab }) => (
   <div>
-    <h2>DummyChart</h2>
+    <h2>{tab.id}</h2>
   </div>
 );
 
